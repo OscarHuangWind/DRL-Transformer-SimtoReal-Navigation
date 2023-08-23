@@ -5,8 +5,8 @@ Created on Fri Jun 10 21:39:22 2022
 
 @author: oscar
 """
-import sys
-sys.path.append('/home/oscar/ws_oscar/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/gtrl/scripts')
+# import sys
+# sys.path.append('/home/oscar/ws_oscar/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/gtrl/scripts')
 
 import torch
 import torch.nn as nn
