@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="scout" >
+
+  <!-- Import Rviz colors -->
+  <xacro:include filename="$(find gtrl)/xacro/bringup/materials.xacro" />
+
+  <xacro:include filename="$(find gtrl)/xacro/robot/scout/scout_mini.xacro"/>
+
+  <!-- Laser -->
+  <xacro:include filename="$(find gtrl)/xacro/laser/hokuyo.xacro"/>
+  <xacro:laser name="front_laser" parent="base_link" xyz="0.125 0 0.1" rpy="0 0 0" meshes="package://gtrl/meshes/laser"/>
+
+  <xacro:include filename="$(find gtrl)/xacro/camera/cameraD.xacro"/>
+  <xacro:camD name="cameraD" parent="base_link" xyz="0.21 0 0.075" rpy="0 0 0" />
+
+  <!-- FishEye Camera -->
+  <xacro:include filename="$(find gtrl)/xacro/camera/cameraFisheye.xacro"/>
+  <xacro:camF name="cameraFishEye" parent="base_link" xyz="0.21 0 0.5" rpy="0 0 0" />
+
+</robot>

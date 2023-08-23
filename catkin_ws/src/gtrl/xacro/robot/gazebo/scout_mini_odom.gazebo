@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<!--
+Reference:
+    [1] https://answers.ros.org/question/246914/four-wheeled-skid-steering-in-gazebo-and-ros-using-gazebo-ros-control/
+    [2] https://answers.ros.org/question/10119/gazebo-controller-for-skid-steering/
+    [3] https://answers.ros.org/question/9640/rotation-error-in-gazebo-simulation/
+    [4] https://www.youtube.com/watch?v=fuRAv6PDwdw
+-->
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+    <gazebo>
+        <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+            <updateRate>50.0</updateRate>
+            <robotNamespace>/scout</robotNamespace>
+            <leftFrontJoint>front_left_wheel</leftFrontJoint>
+            <rightFrontJoint>front_right_wheel</rightFrontJoint>
+            <leftRearJoint>rear_left_wheel</leftRearJoint>
+            <rightRearJoint>rear_right_wheel</rightRearJoint>
+            <wheelSeparation>0.416503</wheelSeparation>
+            <wheelDiameter>3.200e-01</wheelDiameter>
+            <robotBaseFrame>base_link</robotBaseFrame>
+            <torque>10</torque>
+            <commandTopic>cmd_vel</commandTopic>
+            <broadcastTF>true</broadcastTF>
+            <odometryTopic>odom</odometryTopic>
+            <odometryFrame>odom</odometryFrame>
+            <covariance_x>0.000100</covariance_x>
+            <covariance_y>0.000100</covariance_y>
+            <covariance_yaw>0.010000</covariance_yaw>
+        </plugin>
+    </gazebo>
+
+    <gazebo>
+        <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+        <robotNamespace>/</robotNamespace>
+        <jointName>front_left_wheel, front_right_wheel, rear_left_wheel, rear_right_wheel</jointName>
+        <updateRate>50.0</updateRate>
+        <alwaysOn>true</alwaysOn>
+        </plugin>
+    </gazebo>
+</robot>

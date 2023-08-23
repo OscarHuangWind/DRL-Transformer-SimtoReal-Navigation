@@ -1,0 +1,25 @@
+authors: []
+blacklist: []
+build_space: build
+catkin_make_args: []
+cmake_args:
+- -DPYTHON_EXECUTABLE=/usr/bin/python3
+- -DPYTHON_INCLUDE_DIR=/usr/include/python3.7m
+- -DPYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.7m.so
+devel_layout: linked
+devel_space: devel
+extend_path: null
+extends: null
+install: false
+install_space: install
+isolate_install: false
+jobs_args: []
+licenses:
+- TODO
+log_space: logs
+maintainers: []
+make_args: []
+source_space: src
+use_env_cache: false
+use_internal_make_jobserver: true
+whitelist: []

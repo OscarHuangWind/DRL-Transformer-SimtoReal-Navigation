@@ -1,0 +1,25 @@
+# Blender MTL File: 'None'
+# Material Count: 2
+
+newmtl CGMClassic
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd CGMClassic_Diffuse.png
+
+newmtl Wheels
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Bump Wheels_Normal_Normal_Bump.tga
+map_Kd Carts_Wheels_Diffuse.png

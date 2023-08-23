@@ -1,0 +1,58 @@
+##### gtrl Config #####
+---
+##### DRL #####
+SEED : 525  # Random seed number
+MAX_STEPS : 300
+MAX_EPISODES : 500  # Maximum number of steps to perform
+BATCH_SIZE : 32  # Size of the mini-batch
+LR_A : 0.001 # Actor learning rate
+LR_C : 0.001 # Critic learning rate
+GAMMA : 0.999  # Discount factor to calculate the discounted future reward (should be close to 1)
+TAU : 0.005  # Soft target update variable (should be close to 0)
+ACTOR_FREQ : 1  # Frequency of Actor network updates
+BUFFER_SIZE : 20000  # Maximum size of the buffer
+FRAME_STACK : 4 # Number of Channel
+PLOT_INTERVAL : 1
+EVAL_THRESHOLD : 100 # episode trigger for evaluation
+EVAL_EPOCH : 5  # number of episodes for evaluation
+SAVE_INTERVAL : 50
+SAVE_THRESHOLD : 1 # episode trigger for saving the model
+REWARD_THRESHOLD : 100 # reward trigger for evaluation
+SAVE : True # whether to save the model or not
+
+###### Attention #####
+PRE_TRAIN : False # whether intialize with pre-trained parameter
+ATTENTION_ONLY : False
+P_ATTENTION_FIX : False # whether fix the weights and bias of transformer
+C_ATTENTION_FIX : False # # whether fix the weights and bias of transformer
+
+###### Human Intervention #####
+PRE_BUFFER : False # Human expert buffer
+HUMAN_INTERVENTION : False # whether need guidance from human driver
+
+##### Entropy #####
+AUTO_TUNE : True # whether automatically tune the temperature parameter
+ALPHA : 1.0
+LR_ALPHA : 0.0001
+
+##### Environment #####
+ENV_NAME : "RRC"
+DRIVER : 'Oscar'
+ROBOT : 'scout'
+L_SCALE : 0.5
+A_SCALE : 2
+
+##### Algo ######
+SAC:
+    name : 'drl'
+    actor_type : "GaussianConvNet"
+    critic_type : "CNN" # CNN or Transformer
+    block : 0
+    head : 0
+
+GoT-SAC:
+    name : 'gtrl'
+    actor_type : "GaussianTransformer"
+    critic_type : "CNN" # CNN or Transformer
+    block : 2
+    head : 4

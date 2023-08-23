@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="scout">
+
+<!-- Camera -->
+<xacro:macro name="camF" params="name parent xyz rpy">
+
+  <joint name="${parent}_${name}_joint" type="fixed">
+      <!-- <axis xyz="0 0 1" /> -->
+      <axis xyz="0.19 0 0.5" />
+      <origin xyz="${xyz}" rpy="${rpy}"/>
+      <parent link="${parent}"/>
+      <child link="${name}"/>
+  </joint>
+
+  <!-- Camera -->
+  <link name="${name}">
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+    <!-- <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.03"/>
+      </geometry>
+      <material name="grey"/>
+    </visual> -->
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.03"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="${name}">
+    <material value="Gazebo/Grey"/>
+  </gazebo>
+
+  <link name="fisheye_frame"/>
+
+  <joint name="fisheye_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="-1.57 0 -1.57"/>
+      <parent link="${name}"/>
+      <child link="fisheye_frame"/>
+  </joint>
+
+  <gazebo reference="${name}">
+    <sensor type="wideanglecamera" name="camera2">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>3.84</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>B8G8R8</format>
+        </image>
+        <clip>
+          <near>0.01</near>
+          <far>10</far>
+        </clip>
+        <lens>
+          <!-- type element is mandatory -->
+          <type>custom</type>
+
+          <!-- manually defined mapping function r = c1*f*fun(theta/c2 + c3) -->
+          <!-- More information here: https://en.wikipedia.org/wiki/Fisheye_lens#Mapping_function -->
+          <custom_function>
+          <c1>3</c1>   <!-- linear scaling -->
+          <c2>8</c2>      <!-- angle scaling -->
+          <f>1.0</f>      <!-- one more scaling parameter -->
+          <fun>tan</fun>  <!-- one of sin,tan,id -->
+          </custom_function>
+
+          <!-- if it is set to `true` your horizontal FOV will ramain as defined -->
+          <!-- othervise it depends on lens type and custom function, if there is one -->
+          <scale_to_hfov>true</scale_to_hfov>
+          <!-- resolution of the cubemap texture, the highter it is - the sharper is your image -->
+          <env_texture_size>512</env_texture_size>
+        </lens>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.05</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_plugin" filename="libgazebo_ros_camera.so">
+          <baseline>0.2</baseline>
+          <alwaysOn>true</alwaysOn>
+          <!-- Keep this zero, update_rate in the parent <sensor> tag
+            will control the frame rate. -->
+          <updateRate>0</updateRate>
+          <cameraName>camera_fish</cameraName>
+          <imageTopicName>/camera/fisheye/image_raw</imageTopicName>
+          <cameraInfoTopicName>/camera/fisheye/camera_info</cameraInfoTopicName>
+          <frameName>fisheye_frame</frameName>
+          <pointCloudCutoff>0.01</pointCloudCutoff>
+          <distortionK1>-0.8</distortionK1>
+          <distortionK2>0.12</distortionK2>
+          <distortionK3>10</distortionK3>
+          <distortionT1>0</distortionT1>
+          <distortionT2>0</distortionT2>
+          <CxPrime>0</CxPrime>
+          <Cx>0</Cx>
+          <Cy>0</Cy>
+          <focalLength>0</focalLength>
+          <hackBaseline>0</hackBaseline>
+        </plugin>
+    </sensor>
+  </gazebo>
+
+</xacro:macro>
+</robot>
+
+
+
+
+<!-- <?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="scout">
+
+<xacro:macro name="camF" params="name parent xyz rpy">
+
+  <link name="fisheye_frame">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.03"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.03"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="fisheye_joint" type="fixed">
+      <origin xyz="${xyz}" rpy="${rpy}"/>
+      <parent link="${parent}"/>
+      <child link="fisheye_frame"/>
+  </joint>
+
+  <gazebo reference="${name}">
+    <sensor name="camera" type="wideanglecamera" >
+      <always_on>true</always_on>
+      <update_rate>30</update_rate>
+      <camera name="${name}">
+        <horizontal_fov>3.840</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>B8G8R8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>100</far>
+        </clip>
+        <lens> 
+          <type>custom</type>
+          <custom_function>
+            <c1>0.63</c1>
+            <c2>2</c2>
+            <c3>0</c3>
+            <f>1.0</f>
+            <fun>id</fun> 
+          </custom_function>
+          <scale_to_hfov>1</scale_to_hfov>
+          <cutoff_angle>3.840</cutoff_angle>
+          <env_texture_size>1024</env_texture_size>
+        </lens>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>30.0</updateRate>
+        <cameraName>${name}</cameraName>
+        <imageTopicName>/camera/fisheye/image_raw</imageTopicName>
+        <cameraInfoTopicName>/camera/fisheye/camera_info</cameraInfoTopicName>
+        <frameName>fisheye_frame</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+</xacro:macro>
+</robot> -->
