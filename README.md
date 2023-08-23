@@ -120,10 +120,10 @@ k9
 
 # AGV and lab environment model in simulation and real world.
 <p float="left">
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/gazebo_scout.png" height= "200" />
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/gazebo_world.png" height= "200" />
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/AGV.png" height= "200" />
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/Robotics_Research_Centre.png" height= "200" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/gazebo_scout.png" height= "180" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/gazebo_world.png" height= "180" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/AGV.png" height= "180" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/Robotics_Research_Centre.png" height= "180" />
 </p>
 
 # Sim-to-Real navigaiton experiment in office environment.
