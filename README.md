@@ -7,10 +7,10 @@
 
 # Preview Simulation
 <p float="left">
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_0.gif" height= "220" />
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_8.gif" height= "220" />
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_2.gif" height= "220" />
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_6.gif" height= "220" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_0.gif" height= "200" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_8.gif" height= "200" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_2.gif" height= "200" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_6.gif" height= "200" />
 </p>
 
 # Preview Sim-to-Real Navigation Experiment
@@ -105,7 +105,7 @@ k9
 # Framework
 
 <p align="center">
-<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/framework_final.png" height= "600" width="780">
+<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/framework_final.png">
 </p>
 
 # Goal-guided Transformer (GoT)
@@ -128,5 +128,5 @@ k9
 
 # Sim-to-Real navigaiton experiment in office environment.
 <p align="center">
-<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/office_environment.png" height= "400">
+<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/office_environment.png">
 </p>
