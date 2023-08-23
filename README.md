@@ -5,17 +5,16 @@
 
 :wrench: Realized in ROS Gazebo simulator with Ubuntu 20.04, ROS noetic, and Pytorch. 
 
-Email: wenhui001@e.ntu.edu.sg
 # Preview Simulation
 <p float="left">
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_0.gif" height= "250" />
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_8.gif" height= "250" />
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_2.gif" height= "250" />
-  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_6.gif" height= "250" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_0.gif" height= "220" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_8.gif" height= "220" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_2.gif" height= "220" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_6.gif" height= "220" />
 </p>
 
 # Preview Sim-to-Real Experiment
-[GTRL Videos](https://www.youtube.com/watch?v=aqJCHcsj4w0)
+:point_right: [GTRL Videos](https://www.youtube.com/watch?v=aqJCHcsj4w0) :point_left:
 
 # Basics
 :one: [ROS Noetic](http://wiki.ros.org/noetic/Installation)
@@ -37,14 +36,10 @@ conda activate gtrl
 ## Install Dependencies.
 ```
 pip install numpy tqdm natsort cpprb matplotlib einops squaternion opencv-python
-```
-```
 sudo apt install python3-catkin-tools python3-osrf-pycommon
-```
-```
 sudo apt-get install ros-noetic-cv-bridge
 ```
-### Optional step for real-time plotting (reward curve). 
+### (Suggested) Optional step for visualizing real-time plotting (reward curve). 
 ```
 conda install spyder==5.2.2
 ```
@@ -63,19 +58,12 @@ catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
 ```
 
 ## Set up the environment variables.
-Python Path:
 ```
 export PYTHONPATH=~/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/gtrl/scripts
-```
-Gazebo Resource Path:
-```
 export GAZEBO_RESOURCE_PATH=~/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/gtrl/launch
-```
-LD Library Path:
-```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ros/noetic/lib
 ```
-Alternatively, you can select to write these variables to the .bashrc file so that it can be automatically set when opening terminal.
+Alternatively, you can select to write these variables to the ~/.bashrc file so that it can be automatically set when opening terminal.
 
 ## Source the workspace.
 ```
@@ -105,7 +93,7 @@ python main.py
 ```
 killall -9 rosout roslaunch rosmaster gzserver nodelet robot_state_publisher gzclient python python3
 ```
-Alternatively, you can add add alias of these commands to the .bashrc file:
+Alternatively, you can add alias of these commands to the ~/.bashrc file:
 ```
 alias k9='killall -9 rosout roslaunch rosmaster gzserver nodelet robot_state_publisher gzclient python python3'
 ```
@@ -117,10 +105,28 @@ k9
 # Framework
 
 <p align="center">
-<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/framework_final.png" height= "500" width="650">
+<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/framework_final.png" height= "600" width="780">
 </p>
 
 # Goal-guided Transformer (GoT)
 <p align="center">
-<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/GoalTransformer_final.png" >
+<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/GoalTransformer_final.png">
+</p>
+
+# Noise-augmented RGB images from fisheye camera
+<p align="center">
+<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/fisheye_final.png" height= "350" width="650">
+</p>
+
+# AGV and lab environment model in simulation and real world.
+<p float="left">
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/gazebo_scout.png" height= "200" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/gazebo_world.png" height= "200" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/AGV.png" height= "200" />
+  <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/Robotics_Research_Centre.png" height= "200" />
+</p>
+
+# Sim-to-Real navigaiton experiment in office environment.
+<p align="center">
+<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/office_environment.png" height= "400">
 </p>
