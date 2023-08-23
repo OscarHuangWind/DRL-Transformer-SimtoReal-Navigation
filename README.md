@@ -1,5 +1,5 @@
 # Goal-guided Transformer-enabled Reinforcement Learning for Efficient Autonomous Navigation
-:dizzy: **A goal-driven mapless end-to-end autonomous navigation of automated grounded vehicle (AGV) through Transformer-enabled deep reinforcement learning (DRL) algorithm.**
+:dizzy: **A goal-driven mapless end-to-end autonomous navigation of automated grounded vehicle (AGV) realized through Transformer-enabled deep reinforcement learning (DRL) algorithm.**
 
 :blue_car: A **car-like mobile robot learns to autonomously navigate to a random goal position only through raw RGB images from one Fisheye camera and goal information in polar coordination system.**
 
