@@ -1,7 +1,7 @@
 # Goal-guided Transformer-enabled Reinforcement Learning for Efficient Autonomous Navigation
-:dizzy: A goal-driven mapless end-to-end autonomous navigation of automated grounded vehicle (AGV) through Transformer-enabled deep reinforcement learning (DRL) algorithm.
+:dizzy: **A goal-driven mapless end-to-end autonomous navigation of automated grounded vehicle (AGV) through Transformer-enabled deep reinforcement learning (DRL) algorithm.**
 
-:blue_car: A car-like mobile robot learns to autonomously navigate to a random goal position only through raw RGB images from one fisheye camera and goal information in polar coordination system.
+:blue_car: A **car-like mobile robot learns to autonomously navigate to a random goal position only through raw RGB images from one Fisheye camera and goal information in polar coordination system.**
 
 :wrench: Realized in ROS Gazebo simulator with Ubuntu 20.04, ROS noetic, and Pytorch. 
 
@@ -13,7 +13,7 @@
   <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_6.gif" height= "220" />
 </p>
 
-# Preview Sim-to-Real Experiment
+# Preview Sim-to-Real Navigation Experiment
 :point_right: [GTRL Videos](https://www.youtube.com/watch?v=aqJCHcsj4w0) :point_left:
 
 # Basics
