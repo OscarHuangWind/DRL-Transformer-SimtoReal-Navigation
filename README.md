@@ -6,7 +6,7 @@
 :wrench: Realized in ROS Gazebo simulator with Ubuntu 20.04, ROS noetic, and Pytorch. 
 
 # Preview Simulation
-<p float="left">
+<p>
   <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_0.gif" height= "200" />
   <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_8.gif" height= "200" />
   <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_2.gif" height= "200" />
@@ -115,11 +115,11 @@ k9
 
 # Noise-augmented RGB images from fisheye camera
 <p align="center">
-<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/fisheye_final.png" height= "350" width="650">
+<img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/fisheye_final.png">
 </p>
 
 # AGV and lab environment model in simulation and real world.
-<p float="left">
+<p>
   <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/gazebo_scout.png" height= "180" />
   <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/gazebo_world.png" height= "180" />
   <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/AGV.png" height= "180" />
