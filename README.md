@@ -5,7 +5,8 @@
 
 :wrench: Realized in ROS Gazebo simulator with Ubuntu 20.04, ROS noetic, and Pytorch. 
 
-# Preview Simulation
+# Preview Simulation 
+Click the gif to zoom in :mag_right:
 <p align="center">
   <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_0.gif" width= "45%" />
   <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_8.gif" width= "45%" />
