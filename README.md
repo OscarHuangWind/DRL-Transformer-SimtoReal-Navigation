@@ -14,8 +14,8 @@ Click the gif to zoom in :mag_right:
   <img src="https://github.com/OscarHuangWind/DRL-Transformer-SimtoReal-Navigation/blob/master/Materials/demo_6.gif" width= "45%" />
 </p>
 
-# Preview Sim-to-Real Navigation Experiment
-:point_right: [GTRL Videos](https://www.youtube.com/watch?v=aqJCHcsj4w0) :point_left:
+# Video: Sim-to-Real Experiment :arrow_lower_left:
+:point_right: [<ins>GTRL Sim-to-Real Navigation Experiment Video<ins>](https://www.youtube.com/watch?v=aqJCHcsj4w0) :point_left:
 
 # Basics
 :one: [ROS Noetic](http://wiki.ros.org/noetic/Installation)
