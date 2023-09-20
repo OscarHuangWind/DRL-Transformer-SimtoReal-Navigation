@@ -1,6 +1,6 @@
 # GoT-GTRL
 ### :page_with_curl: Goal-guided Transformer-enabled Reinforcement Learning for Efficient Autonomous Navigation
-### [[**arXiv**]](https://arxiv.org/abs/2301.00362) | [[**Video**]](https://www.youtube.com/watch?v=aqJCHcsj4w0&t=1s)
+### [[**Published Paper**]](https://ieeexplore.ieee.org/document/10254445) | [[**arXiv**]](https://arxiv.org/abs/2301.00362) | [[**Video**]](https://www.youtube.com/watch?v=aqJCHcsj4w0&t=1s)
 
 :dizzy: **A goal-driven mapless end-to-end autonomous navigation of automated grounded vehicle (AGV) realized through Transformer-enabled deep reinforcement learning (DRL) algorithm.**
 
