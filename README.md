@@ -8,8 +8,19 @@
 
 :wrench: Realized in ROS Gazebo simulator with Ubuntu 20.04, ROS noetic, and Pytorch. 
 
-# General Info
-:tada: This work has been accepted by **IEEE Transactions on Intelligent Transportation Systems (T-ITS)**, will be published soon.
+# Citation
+If you find this repository useful for your research, please consider starring :star: our repo and citing our paper.
+```
+@ARTICLE{huang2023goal,
+  author={Huang, Wenhui and Zhou, Yanxin and He, Xiangkun and Lv, Chen},
+  journal={IEEE Transactions on Intelligent Transportation Systems}, 
+  title={Goal-Guided Transformer-Enabled Reinforcement Learning for Efficient Autonomous Navigation}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-14},
+  doi={10.1109/TITS.2023.3312453}}
+```
 
 # Preview Simulation 
 Click the gif to zoom in :mag_right:
