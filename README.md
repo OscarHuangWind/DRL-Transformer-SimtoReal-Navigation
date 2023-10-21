@@ -1,8 +1,8 @@
 # GoT-GTRL
 ### :page_with_curl: Goal-guided Transformer-enabled Reinforcement Learning for Efficient Autonomous Navigation
-### [[**Published Paper**]](https://ieeexplore.ieee.org/document/10254445) | [[**arXiv**]](https://arxiv.org/abs/2301.00362) | [[**Video**]](https://www.youtube.com/watch?v=aqJCHcsj4w0&t=1s)
+### [[**Published Paper**]](https://ieeexplore.ieee.org/document/10254445) | [[**arXiv**]](https://arxiv.org/abs/2301.00362) | [[**BiliBili**]](https://www.bilibili.com/video/BV1Mj41147Md/) | [[**Youtube**]](https://www.youtube.com/watch?v=aqJCHcsj4w0&t=1s)
 
-:dizzy: **A goal-driven mapless end-to-end autonomous navigation of automated grounded vehicle (AGV) realized through Transformer-enabled deep reinforcement learning (DRL) algorithm.**
+:dizzy: **A goal-driven mapless end-to-end autonomous navigation of unmanned grounded vehicle (UGV) realized through Transformer-enabled deep reinforcement learning (DRL) algorithm.**
 
 :blue_car: A **car-like mobile robot learns to autonomously navigate to a random goal position only through raw RGB images from one Fisheye camera and goal information in polar coordination system.**
 
@@ -57,7 +57,7 @@ pip install numpy tqdm natsort cpprb matplotlib einops squaternion opencv-python
 sudo apt install python3-catkin-tools python3-osrf-pycommon
 sudo apt-get install ros-noetic-cv-bridge
 ```
-### (Suggested) Optional step for visualizing real-time plotting (reward curve). 
+### Optional step for visualizing real-time plotting (reward curve) with Spyder. 
 ```
 conda install spyder==5.2.2
 ```
@@ -105,7 +105,7 @@ Run it in the terminal:
 ```
 python main.py
 ```
-(suggested) Alternatively, if you have already installed spyder, just click the run file button in spyder.
+(Optional) Alternatively, if you have already installed spyder, just click the run file button in spyder.
 
 ## To kill the program, it is suggested to use following commands.
 ```
