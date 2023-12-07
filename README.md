@@ -92,13 +92,13 @@ Copy all the files under models folder to your default gazebo models folder.
 cp -a ~/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/gtrl/models/. ~/.gazebo/models
 ```
 ## Revise your system path in main.py and env_lab.py (gtrl/scripts/Environments/env_lab.py) file.
-```
 main.py
+```
 import sys
 sys.path.append('/home/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/gtrl/scripts')
 ```
-```
 env_lab.py (line 129)
+```
 fullpath = os.path.join('/home/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/drl_navigation/launch', launchfile)
 ```
 ## Time to train and get your GTRL model!!!
