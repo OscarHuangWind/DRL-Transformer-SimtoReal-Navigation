@@ -98,7 +98,7 @@ import sys
 sys.path.append('/home/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/gtrl/scripts')
 ```
 ```
-env_lab.py
+env_lab.py (line 129)
 fullpath = os.path.join('/home/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/drl_navigation/launch', launchfile)
 ```
 ## Time to train and get your GTRL model!!!
