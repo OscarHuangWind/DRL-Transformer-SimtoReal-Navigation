@@ -34,10 +34,10 @@ Click the gif to zoom in :mag_right:
 # Video: Sim-to-Real Experiment :arrow_lower_left:
 :point_right: [<ins>GTRL Sim-to-Real Navigation Experiment Video<ins>](https://www.youtube.com/watch?v=aqJCHcsj4w0) :point_left:
 
-# Basics
+# Basic Dependency Installation
 :one: [ROS Noetic](http://wiki.ros.org/noetic/Installation)
 
-:two: [Gazebo](http://classic.gazebosim.org/tutorials?tut=install_from_source&cat=install)
+:two: [Gazebo](https://classic.gazebosim.org/tutorials?tut=install_ubuntu)
 
 :three: [Pytorch](https://pytorch.org/get-started/locally/)
 
@@ -86,15 +86,20 @@ Alternatively, you can select to write these variables to the ~/.bashrc file so 
 ```
 source devel/setup.bash
 ```
-## :heavy_exclamation_mark:Important:heavy_exclamation_mark: 
+## Important!
 Copy all the files under models folder to your default gazebo models folder.
 ```
 cp -a ~/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/gtrl/models/. ~/.gazebo/models
 ```
-## Revise your system path in main.py file.
+## Revise your system path in main.py and env_lab.py (gtrl/scripts/Environments/env_lab.py) file.
 ```
+main.py
 import sys
 sys.path.append('/home/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/gtrl/scripts')
+```
+```
+env_lab.py
+fullpath = os.path.join('/home/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/drl_navigation/launch', launchfile)
 ```
 ## Time to train and get your GTRL model!!!
 ```
