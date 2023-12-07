@@ -53,7 +53,7 @@ conda activate gtrl
 ```
 ## Install Dependencies.
 ```
-pip install numpy tqdm natsort cpprb matplotlib einops squaternion opencv-python
+pip install numpy tqdm natsort cpprb matplotlib einops squaternion opencv-python rospkg rosnumpy yaml
 sudo apt install python3-catkin-tools python3-osrf-pycommon
 sudo apt-get install ros-noetic-cv-bridge
 ```
@@ -77,7 +77,6 @@ catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 ## Set up the environment variables.
 ```
-export PYTHONPATH=~/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/gtrl/scripts
 export GAZEBO_RESOURCE_PATH=~/$your workspace/DRL-Transformer-SimtoReal-Navigation/catkin_ws/src/gtrl/launch
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ros/noetic/lib
 ```
