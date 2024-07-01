@@ -11,15 +11,16 @@
 # Citation
 If you find this repository useful for your research, please consider starring :star: our repo and citing our paper.
 ```
-@ARTICLE{huang2023goal,
+@article{huang2024goal,
+  title={Goal-Guided Transformer-Enabled Reinforcement Learning for Efficient Autonomous Navigation},
   author={Huang, Wenhui and Zhou, Yanxin and He, Xiangkun and Lv, Chen},
-  journal={IEEE Transactions on Intelligent Transportation Systems}, 
-  title={Goal-Guided Transformer-Enabled Reinforcement Learning for Efficient Autonomous Navigation}, 
-  year={2023},
-  volume={},
-  number={},
-  pages={1-14},
-  doi={10.1109/TITS.2023.3312453}}
+  journal={IEEE Transactions on Intelligent Transportation Systems},
+  volume={25},
+  number={2},
+  pages={1832--1845},
+  year={2024},
+  publisher={IEEE}
+}
 ```
 
 # Preview Simulation 
